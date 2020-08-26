@@ -29,5 +29,10 @@ public class PacienteServiceImpl implements PacienteService {
     public void delete(Paciente paciente) {
         repository.delete(paciente);
     }
+
+    @Override    
+    public List<Paciente> getAllByNome(String nome) {                
+        return repository.findAllByNomeContains(nome);    
+    }
     
 }
