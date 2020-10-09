@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
- 
+
 @Service
 public class JWTUtil {
-    private String SECRET_KEY= "2nYbzL7sdkfnM47E8U2QUyYU";
+    private String SECRET_KEY= "q4MvGeJnXGt7v4LdhyY3uNBW";
     public String extractUserName(String token){
         return extractClaim(token, Claims::getSubject);
     }

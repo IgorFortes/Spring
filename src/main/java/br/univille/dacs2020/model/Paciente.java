@@ -17,10 +17,10 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(length = 1000, nullable = false)
+    @Column(length = 1000,nullable = false)
     private String nome;
     private String sexo;
-    @Temporal(value = TemporalType.DATE)
+    @Temporal(value=TemporalType.DATE)
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date dataNascimento;
 
@@ -28,20 +28,8 @@ public class Paciente {
         return id;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -52,7 +40,19 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

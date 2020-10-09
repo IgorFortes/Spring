@@ -30,9 +30,9 @@ public class PacienteServiceImpl implements PacienteService {
         repository.delete(paciente);
     }
 
-    @Override    
-    public List<Paciente> getAllByNome(String nome) {                
-        return repository.findAllByNomeContains(nome);    
+    @Override
+    public List<Paciente> getAllByNome(String nome) {
+        return repository.findAllByNomeContainsIgnoreCase(nome);
     }
     
 }
